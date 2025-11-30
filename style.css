@@ -1,0 +1,311 @@
+/* Custom properties for easy color changes */
+:root {
+    --primary-color: #007bff; /* Blue - Standard Agency Color (can be adjusted to match logo) */
+    --secondary-color: #17a2b8; /* Cyan/Teal - Secondary Accent */
+    --accent-color: #ffc107; /* Yellow - For highlighting recommended package */
+    --dark-bg: #212529; /* Dark Grey/Black for background */
+    --light-text: #f8f9fa; /* Off-white text */
+    --card-bg: #ffffff; /* White card background */
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-bg);
+    background-color: var(--light-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 8px solid var(--secondary-color);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60px; /* Adjust size */
+    height: 60px; /* Adjust size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--light-text);
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+.hero-section h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    margin: 15px 0 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1em;
+}
+
+.cta-button:hover {
+    background-color: #ffda6a;
+    transform: translateY(-2px);
+}
+
+/* Services/Pricing Section */
+.services-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid transparent;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.package-card.recommended {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.package-card h4 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.duration {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: var(--dark-bg);
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.features li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+.buy-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.buy-button:hover {
+    background-color: #00bcd4;
+}
+
+.upi-note {
+    margin-top: 30px;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Founder Section */
+.founder-section {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.founder-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+.founder-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.founder-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+.founder-info h4 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: var(--light-text);
+}
+
+.founder-info p {
+    color: #ced4da;
+    max-width: 350px;
+    text-align: left;
+}
+
+.secondary-cta {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.secondary-cta:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: #6c757d;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #343a40;
+}
+
+/* WhatsApp Fixed Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    fill: white;
+    width: 28px;
+    height: 28px;
+    stroke: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-card.recommended {
+        transform: scale(1.02);
+    }
+    
+    .founder-details {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .founder-info p {
+        text-align: center;
+    }
+}
